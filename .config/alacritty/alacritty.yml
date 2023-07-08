@@ -1,0 +1,79 @@
+window:
+  opacity: 1
+  decorations: Full
+
+mouse:
+  hide_when_typing: true
+
+font:
+  size: 12
+  normal:
+    family: monospace
+    style: Regular
+  bold:
+    family: monospace
+    style: Bold
+  italic:
+    family: monospace
+    style: Italic
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+
+dark: &dark
+  primary:
+    background: "#000000"
+    foreground: "#d1d1d1"
+    dim_foreground: "#d1d1d1"
+    bright_foreground: "#d1d1d1"
+  selection:
+    text: "#000000"
+    background: "#dfb144"
+  normal:
+    black: "#202020"
+    red: "#d13b3b"
+    green: "#0dbc79"
+    yellow: "#dfdf44"
+    blue: "#2472c8"
+    magenta: "#c42cc4"
+    cyan: "#33a0bb"
+    white: "#d1d1d1"
+  bright:
+    black: "#404040"
+    red: "#fa4b4b"
+    green: "#23d18b"
+    yellow: "#fcfc5c"
+    blue: "#3b8eea"
+    magenta: "#d861d8"
+    cyan: "#29b8db"
+    white: "#eaeaea"
+
+light: &light
+  primary:
+    background: "#ffffff"
+    foreground: "#1d1d1d"
+    dim_foreground: "#1d1d1d"
+    bright_foreground: "#1d1d1d"
+  selection:
+    text: "#1d1d1d"
+    background: "#afafaf"
+  normal:
+    black: "#303030"
+    red: "#d13b3b"
+    green: "#0dbc79"
+    yellow: "#cc9213"
+    blue: "#2472c8"
+    magenta: "#c42cc4"
+    cyan: "#33a0bb"
+    white: "#c4c4c4"
+  bright:
+    black: "#505050"
+    red: "#fa4b4b"
+    green: "#23d18b"
+    yellow: "#de9f15"
+    blue: "#3b8eea"
+    magenta: "#d861d8"
+    cyan: "#29b8db"
+    white: "#d4d4d4"
+
+colors: *dark
