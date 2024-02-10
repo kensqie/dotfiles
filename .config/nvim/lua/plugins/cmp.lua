@@ -19,7 +19,6 @@ return {
 			}),
 			completion = {
 				completeopt = "menu, menuone, noinsert",
-				autocomplete = false,
 			},
 			view = {
 				docs = {
