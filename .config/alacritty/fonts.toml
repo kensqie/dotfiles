@@ -1,0 +1,18 @@
+[font]
+size = 12
+
+[font.normal]
+family = 'Monospace'
+style = 'Medium'
+
+[font.bold]
+family = 'Monospace'
+style = 'Bold'
+
+[font.italic]
+family = 'Monospace'
+style = 'Italic'
+
+[font.bold_italic]
+family = 'Monospace'
+style = 'Bold Italic'

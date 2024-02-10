@@ -1,0 +1,6 @@
+import = [
+	'~/.config/alacritty/options.toml',
+	'~/.config/alacritty/fonts.toml',
+	'~/.config/alacritty/colorschemes/dark.toml',
+]
+

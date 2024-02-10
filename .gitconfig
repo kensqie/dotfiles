@@ -1,0 +1,10 @@
+[user]
+	name =
+	email =
+[alias]
+	hist = log --graph --all --pretty=format:'%C(yellow)%h %C(reset)%s%C(auto)%d %C(blue)(%cr) %C(reset)'
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
+	editor = vim

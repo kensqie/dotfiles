@@ -1,0 +1,9 @@
+[env]
+TERM = 'xterm-256color'
+
+[window]
+decorations = 'Full'
+opacity = 1
+
+[mouse]
+hide_when_typing = true
