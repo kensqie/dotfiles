@@ -1,0 +1,77 @@
+[
+	{
+		"key": "ctrl+n",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "workbench.action.quickOpenSelectNext",
+		"when": "!editorFocus && inputFocus || listFocus"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "workbench.action.quickOpenSelectPrevious",
+		"when": "!editorFocus && inputFocus || listFocus"
+	},
+	{
+		"key": "ctrl+n",
+		"when": "codeActionMenuVisible",
+		"command": "selectNextCodeAction"
+	},
+	{
+		"key": "ctrl+p",
+		"when": "codeActionMenuVisible",
+		"command": "selectPrevCodeAction"
+	},
+	{
+		"key": "c",
+		"command": "list.collapseAll",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "s",
+		"command": "list.toggleSelection",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "r",
+		"command": "renameFile",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "x",
+		"command": "filesExplorer.cut",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "y",
+		"command": "filesExplorer.copy",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "p",
+		"command": "filesExplorer.paste",
+		"when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "m f",
+		"command": "workbench.files.action.createFileFromExplorer",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "m d",
+		"command": "workbench.files.action.createFolderFromExplorer",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "shift+d",
+		"command": "deleteFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+	}
+]
