@@ -1,0 +1,34 @@
+set fish_color_normal normal
+set fish_color_command green
+set fish_color_keyword green
+set fish_color_quote yellow
+set fish_color_redirection green
+set fish_color_end normal
+set fish_color_error brred
+set fish_color_param normal
+set fish_color_valid_path normal
+set fish_color_option normal
+set fish_color_comment magenta
+set fish_color_selection normal --background=brblack
+set fish_color_operator normal
+set fish_color_escape yellow
+set fish_color_autosuggestion brblack
+set fish_color_cwd blue
+set fish_color_cwd_root blue
+set fish_color_user green
+set fish_color_host brred
+set fish_color_host_remote magenta
+set fish_color_status brred
+set fish_color_cancel green
+set fish_color_search_match normal
+set fish_color_history_current normal
+
+set fish_pager_color_progress black --background=white
+set fish_pager_color_background normal
+set fish_pager_color_prefix normal
+set fish_pager_color_completion normal
+set fish_pager_color_description normal
+set fish_pager_color_selected_background --background=brblack
+set fish_pager_color_selected_prefix normal
+set fish_pager_color_selected_completion normal
+set fish_pager_color_selected_description normal
