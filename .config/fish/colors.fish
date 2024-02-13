@@ -1,25 +1,25 @@
 set fish_color_normal normal
-set fish_color_command green
-set fish_color_keyword green
-set fish_color_quote yellow
-set fish_color_redirection green
+set fish_color_command normal
+set fish_color_keyword normal
+set fish_color_quote normal
+set fish_color_redirection normal
 set fish_color_end normal
 set fish_color_error brred
 set fish_color_param normal
 set fish_color_valid_path normal
 set fish_color_option normal
-set fish_color_comment magenta
+set fish_color_comment normal
 set fish_color_selection normal --background=brblack
 set fish_color_operator normal
-set fish_color_escape yellow
+set fish_color_escape normal
 set fish_color_autosuggestion brblack
 set fish_color_cwd blue
 set fish_color_cwd_root blue
 set fish_color_user green
-set fish_color_host brred
-set fish_color_host_remote magenta
+set fish_color_host yellow
+set fish_color_host_remote brred
 set fish_color_status brred
-set fish_color_cancel green
+set fish_color_cancel normal
 set fish_color_search_match normal
 set fish_color_history_current normal
 
