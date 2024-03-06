@@ -64,5 +64,5 @@ map mf mkfile
 map md mkdir
 map gt cd /tmp
 map gC cd ~/.config
-map gc cd ~/code
+map gc cd ~/Code
 map gd cd ~/Downloads
