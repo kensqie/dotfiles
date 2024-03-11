@@ -16,18 +16,29 @@ hide_edge_borders smart
 default_border pixel 1
 default_floating_border pixel 1
 
+# Outputs
+# output HDMI-A-1 mode 1920x1080@60Hz
+# output * bg #000000 solid_color
+
 # Status bar
 bar {
 	position bottom
-	status_command while ~/.config/sway/status.sh; do sleep 2; done
+	status_command while ~/.config/sway/status.sh; do sleep 5; done
 }
 
 # Keyboard
 input type:keyboard {
 	xkb_layout us,ru
-	xkb_options grp:win_space_toggle,ctrl:swapcaps
+	xkb_options grp:win_space_toggle
 	repeat_rate 30
 	repeat_delay 250
+}
+
+# Mouse
+input type:pointer {
+	natural_scroll disabled
+	pointer_accel 0
+	accel_profile "flat"
 }
 
 # Touchpad
