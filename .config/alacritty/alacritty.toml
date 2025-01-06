@@ -1,6 +1,7 @@
+[general]
 import = [
-	'~/.config/alacritty/options.toml',
-	'~/.config/alacritty/fonts.toml',
-	'~/.config/alacritty/colorschemes/dark.toml',
+	'./options.toml',
+	'./fonts.toml',
+	'./colorschemes/dark.toml',
 ]
 
