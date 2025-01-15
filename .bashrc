@@ -35,15 +35,8 @@ bright_white="\e[1;97m";
 
 # Aliases
 alias ls="ls -CF -v --color=auto --group-directories-first"
-
-if command -v eza &> /dev/null; then
-	alias ll="eza --color=auto --group-directories-first -l"
-	alias la="ll -a"
-	alias lt="ll -T"
-else
-	alias ll="ls -l1h"
-	alias la="ll -A"
-fi
+alias ll="ls -l1h"
+alias la="ll -A"
 
 # Functions
 mcd () {
