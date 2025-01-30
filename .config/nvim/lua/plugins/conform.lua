@@ -6,15 +6,15 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				html = { { "prettier", "prettierd" } },
-				css = { { "prettier", "prettierd" } },
-				json = { { "prettier", "prettierd" } },
-				yaml = { { "prettier", "prettierd" } },
-				markdown = { { "prettier", "prettierd" } },
-				javascript = { { "prettier", "prettierd" } },
-				typescript = { { "prettier", "prettierd" } },
-				javascriptreact = { { "prettier", "prettierd" } },
-				typescriptreact = { { "prettier", "prettierd" } },
+				html = { "prettier" },
+				css = { "prettier" },
+				json = { "prettier" },
+				yaml = { "prettier" },
+				markdown = { "prettier" },
+				javascript = { "prettier" },
+				typescript = { "prettier" },
+				javascriptreact = { "prettier" },
+				typescriptreact = { "prettier" },
 			},
 		})
 
@@ -23,3 +23,4 @@ return {
 		end)
 	end,
 }
+
