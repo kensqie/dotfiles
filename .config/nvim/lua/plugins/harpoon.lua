@@ -30,5 +30,5 @@ return {
 		vim.keymap.set("n", "<leader>hd", function() harpoon:list():remove() end, { desc = "Harpoon delete" })
 		vim.keymap.set("n", "<leader>hn", function() harpoon:list():next() end, { desc = "Harpoon next" })
 		vim.keymap.set("n", "<leader>hp", function() harpoon:list():prev() end, { desc = "Harpoon prev" })
-	end
+	end,
 }
