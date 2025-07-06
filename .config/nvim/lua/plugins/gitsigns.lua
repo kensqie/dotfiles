@@ -7,38 +7,39 @@ return {
 			on_attach = function(bufnr)
 				local gs = package.loaded.gitsigns
 
-				vim.keymap.set("n", "<leader>h]", function()
+				vim.keymap.set("n", "<leader>g]", function()
 					if vim.wo.diff then
-						return "<leader>h]"
+						return "<leader>g]"
 					end
 					vim.schedule(function()
 						gs.next_hunk()
 					end)
 					return "<Ignore>"
-				end, { expr = true })
+				end, { expr = true, desc = "Gitsigns next hunk" })
 
-				vim.keymap.set("n", "<leader>h[", function()
+				vim.keymap.set("n", "<leader>g[", function()
 					if vim.wo.diff then
-						return "<leader>h["
+						return "<leader>g["
 					end
 					vim.schedule(function()
 						gs.prev_hunk()
 					end)
 					return "<Ignore>"
-				end, { expr = true })
+				end, { expr = true, desc = "Gitsigns prev hunk" })
 
-				vim.keymap.set({ "n", "v" }, "<leader>hs", "<CMD>Gitsigns stage_hunk<CR>")
-				vim.keymap.set({ "n", "v" }, "<leader>hr", "<CMD>Gitsigns reset_hunk<CR>")
-				vim.keymap.set("n", "<leader>hu", gs.undo_stage_hunk)
-				vim.keymap.set("n", "<leader>hS", gs.stage_buffer)
-				vim.keymap.set("n", "<leader>hR", gs.reset_buffer)
-				vim.keymap.set("n", "<leader>hh", gs.preview_hunk)
-				vim.keymap.set("n", "<leader>hb", function()
+				vim.keymap.set({ "n", "v" }, "<leader>gs", "<CMD>Gitsigns stage_hunk<CR>",
+					{ desc = "Gitsigns stage hunk" })
+				vim.keymap.set({ "n", "v" }, "<leader>gr", "<CMD>Gitsigns reset_hunk<CR>",
+					{ desc = "Gitsigns reset hunk" })
+				vim.keymap.set("n", "<leader>gu", gs.undo_stage_hunk, { desc = "Gitsigns undo stage hunk" })
+				vim.keymap.set("n", "<leader>gh", gs.preview_hunk, { desc = "Gitsigns preview hunk" })
+				vim.keymap.set("n", "<leader>gS", gs.stage_buffer, { desc = "Gitsigns stage buffer" })
+				vim.keymap.set("n", "<leader>gR", gs.reset_buffer, { desc = "Gitsigns reset buffer" })
+				vim.keymap.set("n", "<leader>gb", function()
 					gs.blame_line({ full = true })
-				end)
-				vim.keymap.set("n", "<leader>hB", gs.toggle_current_line_blame)
-				vim.keymap.set("n", "<leader>hd", gs.diffthis)
-				vim.keymap.set("n", "<leader>hD", gs.toggle_deleted)
+				end, { desc = "Gitsigns blame line" })
+				vim.keymap.set("n", "<leader>gB", gs.toggle_current_line_blame, { desc = "Gitsigns toggle line blame" })
+				vim.keymap.set("n", "<leader>gd", gs.diffthis, { desc = "Gitsigns diff" })
 			end,
 		})
 	end,
