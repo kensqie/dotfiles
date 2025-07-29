@@ -54,9 +54,9 @@ return {
 				["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
 				["<C-u>"] = cmp.mapping.scroll_docs(-5),
 				["<C-d>"] = cmp.mapping.scroll_docs(5),
-				["<C-e>"] = cmp.mapping.abort(),
+				["<C-q>"] = cmp.mapping.abort(),
 				["<C-space>"] = cmp.mapping.complete(),
-				["<C-g>"] = function()
+				["<C-k>"] = function()
 					if cmp.visible_docs() then
 						cmp.close_docs()
 					else
