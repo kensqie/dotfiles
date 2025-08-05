@@ -42,16 +42,16 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>tF", function()
+		vim.keymap.set("n", "<leader>jF", function()
 			builtin.find_files({ no_ignore = true })
 		end, { desc = 'Telescope find files no ignore' })
-		vim.keymap.set("n", "<leader>tt", builtin.builtin, { desc = 'Telescope' })
-		vim.keymap.set("n", "<leader>tf", builtin.find_files, { desc = 'Telescope find files' })
-		vim.keymap.set("n", "<leader>tr", builtin.oldfiles, { desc = 'Telescope recent files' })
-		vim.keymap.set("n", "<leader>ts", builtin.live_grep, { desc = 'Telescope grep' })
-		vim.keymap.set("n", "<leader>tg", builtin.git_status, { desc = 'Telescope git status' })
-		vim.keymap.set("n", "<leader>td", builtin.diagnostics, { desc = 'Telescope diagnostics' })
-		vim.keymap.set("n", "<leader>to", builtin.treesitter, { desc = 'Telescope treesitter' })
-		vim.keymap.set("n", "<leader>tb", builtin.buffers, { desc = 'Telescope buffers' })
+		vim.keymap.set("n", "<leader>jt", builtin.builtin, { desc = 'Telescope' })
+		vim.keymap.set("n", "<leader>jf", builtin.find_files, { desc = 'Telescope find files' })
+		vim.keymap.set("n", "<leader>jr", builtin.oldfiles, { desc = 'Telescope recent files' })
+		vim.keymap.set("n", "<leader>js", builtin.live_grep, { desc = 'Telescope grep' })
+		vim.keymap.set("n", "<leader>jg", builtin.git_status, { desc = 'Telescope git status' })
+		vim.keymap.set("n", "<leader>jd", builtin.diagnostics, { desc = 'Telescope diagnostics' })
+		vim.keymap.set("n", "<leader>jo", builtin.treesitter, { desc = 'Telescope treesitter' })
+		vim.keymap.set("n", "<leader>jb", builtin.buffers, { desc = 'Telescope buffers' })
 	end,
 }
