@@ -4,6 +4,7 @@ vim.diagnostic.config({ signs = false })
 local options = {
 	encoding = "utf-8",
 	signcolumn = "yes",
+	winborder = "single",
 	termguicolors = true,
 	pumheight = 10,
 	number = true,
