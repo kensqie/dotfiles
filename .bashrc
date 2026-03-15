@@ -7,12 +7,15 @@ shopt -s checkwinsize
 
 HISTSIZE=1000
 PROMPT_DIRTRIM=3
-PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -a${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
 
+# Environment
 export VISUAL=vim
 export EDITOR=$VISUAL
+
 export HISTCONTROL="ignoreboth:erasedups"
-export HISTIGNORE="&:cls:ll:ls:lz:lf:ld:ps:logs:cd:home:pwd:[bf]g:exit"
+export HISTIGNORE="&:cls:ls:la:ll:lt:ps:logs:cd:home:pwd:[bf]g:exit"
+
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 # Colors
@@ -48,35 +51,33 @@ up() {
 }
 
 git_branch() {
-	local s="";
-	local branchName="";
-	if [ $(git rev-parse --is-inside-work-tree &>/dev/null; echo "${?}") == '0' ]; then
-		if [ "$(git rev-parse --is-inside-git-dir 2> /dev/null)" == 'false' ]; then
-			git update-index --really-refresh -q &>/dev/null;
-			if ! $(git diff --quiet --ignore-submodules --cached); then
-				s+='+';
-			fi;
-			if ! $(git diff-files --quiet --ignore-submodules --); then
-				s+='!';
-			fi;
-			if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-				s+='?';
-			fi;
-			if $(git rev-parse --verify refs/stash &>/dev/null); then
-				s+='$';
-			fi;
-		fi;
-		branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
-			git rev-parse --short HEAD 2> /dev/null || \
-			echo '(unknown)')";
-		[ -n "${s}" ] && s="[${s}]";
-		echo -e "${1}${branchName}${s}";
-	else
-		return;
-	fi;
+	git rev-parse --is-inside-work-tree &>/dev/null || return
+	[ "$(git rev-parse --is-inside-git-dir 2>/dev/null)" != "true" ] || return
+
+	git update-index --really-refresh -q &>/dev/null
+
+	local s="" branch
+	git diff --cached --quiet --ignore-submodules || s+='+'
+	git diff --quiet --ignore-submodules || s+='!'
+	[ -n "$(git ls-files --others --exclude-standard)" ] && s+='?'
+	git rev-parse --verify refs/stash &>/dev/null && s+='$'
+
+	branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null || echo '(unknown)')
+	[ -n "$s" ] && s="[$s]"
+
+	printf " %s%s" "$1" "$branch$s"
 }
+
+add_to_path() {
+	case ":$PATH:" in
+		*":$1:"*) ;;
+		*) PATH="$PATH:$1" ;;
+	esac
+}
+
+add_to_path "$HOME/.local/bin"
 
 # Prompt string
 PS1="\[$blue\]\w"
-PS1+='$(if git rev-parse --git-dir > /dev/null 2>&1; then echo "$(git_branch " \[$yellow\]")"; fi)'
+PS1+='$(if git rev-parse --git-dir >/dev/null 2>&1; then echo "\['"$yellow"'\]$(git_branch)"; fi)'
 PS1+="\[$(tput sgr0)\] "
