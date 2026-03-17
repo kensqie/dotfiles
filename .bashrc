@@ -1,4 +1,16 @@
-# General
+# Aliases
+alias ls="ls -CF -v --color=auto --group-directories-first"
+alias ll="ls -l1h"
+alias la="ll -A"
+
+# Environment
+export VISUAL=vim
+export EDITOR=$VISUAL
+export HISTCONTROL="ignoreboth:erasedups"
+export HISTIGNORE="&:cls:ls:la:ll:lt:ps:logs:cd:home:pwd:[bf]g:exit"
+export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
+
+# Options
 shopt -s histappend
 shopt -s autocd
 shopt -s checkjobs
@@ -8,15 +20,6 @@ shopt -s checkwinsize
 HISTSIZE=1000
 PROMPT_DIRTRIM=3
 PROMPT_COMMAND="history -a${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
-
-# Environment
-export VISUAL=vim
-export EDITOR=$VISUAL
-
-export HISTCONTROL="ignoreboth:erasedups"
-export HISTIGNORE="&:cls:ls:la:ll:lt:ps:logs:cd:home:pwd:[bf]g:exit"
-
-export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 
 # Colors
 black="\e[1;30m";
@@ -35,11 +38,6 @@ bright_blue="\e[1;94m";
 bright_purple="\e[1;95m";
 bright_cyan="\e[1;96m";
 bright_white="\e[1;97m";
-
-# Aliases
-alias ls="ls -CF -v --color=auto --group-directories-first"
-alias ll="ls -l1h"
-alias la="ll -A"
 
 # Functions
 mcd () {
@@ -75,6 +73,7 @@ add_to_path() {
 	esac
 }
 
+# Path
 add_to_path "$HOME/.local/bin"
 
 # Prompt string
