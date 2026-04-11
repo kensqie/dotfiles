@@ -2,7 +2,7 @@
 	name =
 	email =
 [alias]
-	hist = log --graph --all --pretty=format:'%C(yellow)%h %C(reset)%s%C(auto)%d %C(blue)(%cr) %C(reset)'
+	hist = log --graph --decorate --pretty=format:'%C(auto)%h%C(reset)%C(auto)%d%C(reset)%n%C(bold)%s%C(reset)%n%C(dim white)%an (%cr)%C(reset)'
 [init]
 	defaultBranch = main
 [core]
