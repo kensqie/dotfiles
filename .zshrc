@@ -6,8 +6,6 @@ add_to_path() {
 	esac
 }
 
-add_to_path "$HOME/bin"
-[[ "$(uname -s)" == "Darwin" ]] && add_to_path "/opt/homebrew/bin"
 add_to_path "$HOME/.local/bin"
 
 # Editor
