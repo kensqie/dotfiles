@@ -17,6 +17,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-telescope/telescope.nvim" },
 	{ src = "https://github.com/nvim-lua/plenary.nvim" },
 	{ src = "https://github.com/romus204/tree-sitter-manager.nvim" },
+	{ src = "https://github.com/NeogitOrg/neogit" },
 })
 
 require("plugins.colorscheme")
@@ -29,3 +30,4 @@ require("plugins.comment")
 require("plugins.conform")
 require("plugins.telescope")
 require("plugins.gitsigns")
+require("plugins.neogit")
