@@ -25,6 +25,8 @@ alias la="ls -lhA"
 
 # Options
 setopt correct notify extendedglob
+bindkey -e
+stty -ixon
 
 # Completion
 autoload -Uz compinit; compinit
