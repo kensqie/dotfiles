@@ -1,7 +1,0 @@
-[general]
-import = [
-	'./options.toml',
-	'./fonts.toml',
-	'./colorschemes/dark.toml',
-]
-
