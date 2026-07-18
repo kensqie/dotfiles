@@ -12,7 +12,7 @@ vim.keymap.set({ "n", "v" }, "<C-a>", "ggVG")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-vim.keymap.set("n", "<leader>ke", "<CMD>Explore<CR>", { desc = "Open file explorer" })
+vim.keymap.set("n", "<leader>kE", "<CMD>Explore<CR>", { desc = "Open file explorer" })
 vim.keymap.set("n", "<leader>kw", "<CMD>bdelete<CR>", { desc = "Delete buffer" })
 
 vim.keymap.set({ "n", "v" }, "<leader>ky", [["+y]], { desc = "Copy in global buffer" })

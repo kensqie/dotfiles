@@ -17,6 +17,7 @@ vim.pack.add({
 	{ src = "https://github.com/mason-org/mason-lspconfig.nvim" },
 	{ src = "https://github.com/nvim-telescope/telescope.nvim" },
 	{ src = "https://github.com/nvim-lua/plenary.nvim" },
+	{ src = "https://github.com/mikavilpas/yazi.nvim" },
 })
 
 require("plugins.colorscheme")
@@ -30,3 +31,4 @@ require("plugins.conform")
 require("plugins.telescope")
 require("plugins.gitsigns")
 require("plugins.neogit")
+require("plugins.yazi")
