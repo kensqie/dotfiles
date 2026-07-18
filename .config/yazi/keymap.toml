@@ -1,0 +1,5 @@
+[mgr]
+prepend_keymap = [
+	{ on = [ "g", "i" ], run = "cd --interactive", desc = "Jump interactively" },
+	{ on = [ "g", "<Space>" ], run = "noop" },
+]

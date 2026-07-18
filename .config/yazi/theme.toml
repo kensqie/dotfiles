@@ -1,0 +1,35 @@
+[icon]
+globs = []
+dirs = []
+files = []
+exts = []
+conds = []
+
+[cmp]
+icon_file = ""
+icon_folder = ""
+icon_command = ""
+
+[help]
+icon_info = ""
+icon_warn = ""
+icon_error = ""
+
+[notify]
+icon_info = ""
+icon_warn = ""
+icon_error = ""
+
+[tabs]
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[status]
+sep_left = { open = "", close = ""}
+sep_right = { open = "", close = ""}
+
+[indicator]
+padding = { open = " ", close = " "}
+
+[which]
+padding = { open = "", close = ""}
