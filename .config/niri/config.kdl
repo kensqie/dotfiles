@@ -52,6 +52,8 @@ output "eDP-1" {
 layout {
 	gaps 8
 
+	background-color "transparent"
+
 	center-focused-column "never"
 
 	preset-column-widths {
@@ -94,6 +96,11 @@ hotkey-overlay {
 
 animations {
 	slowdown 1
+}
+
+layer-rule {
+	match namespace="^wallpaper$"
+	place-within-backdrop true
 }
 
 window-rule {
