@@ -1,0 +1,9 @@
+@define-color bg #e5e5e5;
+@define-color fg #1e1e1e;
+@define-color module-bg #ffffff;
+@define-color surface #e5e5e5;
+@define-color muted-fg #8a8a8a;
+@define-color critical #a54242;
+@define-color critical-fg #f2f2f2;
+
+@import url("style-common.css");

@@ -1,0 +1,148 @@
+* {
+	font-family: 'Monospace', 'Font Awesome 5 Free Solid';
+	font-size: 14px;
+}
+
+window#waybar {
+	background-color: @bg;
+	border-bottom: none;
+	color: @fg;
+	transition-duration: 0.3s;
+	transition-property: background-color;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd,
+#battery,
+#language,
+#idle_inhibitor,
+#taskbar,
+#custom-theme-toggle,
+#workspaces {
+	background-color: @module-bg;
+	border: none;
+	border-radius: 5px;
+	color: @fg;
+	padding: 2px 10px;
+	margin: 5px 0;
+}
+
+#taskbar,
+#workspaces {
+	padding: 0;
+	background-color: @surface;
+	color: @fg;
+}
+
+#taskbar button,
+#workspaces button {
+	background-color: @module-bg;
+	color: @muted-fg;
+	border: none;
+	box-shadow: none;
+	padding: 2px 5px;
+	margin-left: 5px;
+}
+
+#taskbar button:hover {
+	background: @fg;
+}
+
+#workspaces {
+	background-color: @surface;
+}
+
+#workspaces button:hover {
+	background: @module-bg;
+	color: @fg;
+}
+
+#workspaces button.focused {
+	background-color: @module-bg;
+	color: @fg;
+}
+
+#workspaces button.urgent,
+#mode {
+	background-color: @critical;
+	color: @critical-fg;
+}
+
+.modules-left > widget:first-child > #workspaces {
+	margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+	margin-left: 0;
+}
+
+#battery,
+#battery.charging,
+#battery.plugged {
+	color: @fg;
+}
+
+@keyframes blink {
+	to {
+		background-color: @fg;
+		color: @surface;
+	}
+}
+
+#battery.critical:not(.charging) {
+	animation-direction: alternate;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-name: blink;
+	animation-timing-function: linear;
+	color: @fg;
+}
+
+label:focus {
+	background-color: @surface;
+}
+
+#tray {
+	margin-right: 5px;
+}
+
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	background-color: @critical;
+	-gtk-icon-effect: highlight;
+}
+
+#idle_inhibitor.activated {
+	background-color: @fg;
+	color: @surface;
+}
+
+#hardware #disk,
+#hardware #cpu,
+#hardware #memory {
+	margin-right: 5px;
+}
+
+#extray #custom-theme-toggle {
+	margin-right: 5px;
+}
