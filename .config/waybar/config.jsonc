@@ -10,15 +10,36 @@
 		"clock"
 	],
 	"modules-right": [
-		"disk",
-		"cpu",
-		"memory",
-		"battery",
+		"group/hardware",
 		"wireplumber",
 		"backlight",
 		"niri/language",
-		"tray"
+		"group/extray"
 	],
+	"group/hardware": {
+		"orientation": "horizontal",
+		"drawer": {
+			"transition-duration": 300,
+			"transition-left-to-right": false
+		},
+		"modules": [
+			"battery",
+			"disk",
+			"cpu",
+			"memory"
+		]
+	},
+	"group/extray": {
+		"orientation": "horizontal",
+		"drawer": {
+			"transition-duration": 300,
+			"transition-left-to-right": false
+		},
+		"modules": [
+			"tray",
+			"custom/theme-toggle"
+		]
+	},
 	"niri/language": {
 		"format": " {short}"
 	},
@@ -85,6 +106,12 @@
 		"device": "intel_backlight",
 		"format": "{icon} {percent}%",
 		"format-icons": [""]
+	},
+	"custom/theme-toggle": {
+		"exec": "~/.config/waybar/scripts/theme-toggle.sh",
+		"return-type": "json",
+		"interval": 5,
+		"on-click": "~/.config/waybar/scripts/theme-toggle.sh --toggle"
 	},
 	"tray": {
 		"icon-size": 20,

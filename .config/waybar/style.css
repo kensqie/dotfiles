@@ -34,7 +34,7 @@ window#waybar.hidden {
 #language,
 #idle_inhibitor,
 #taskbar,
-#custom-weather,
+#custom-theme-toggle,
 #workspaces {
 	background-color: #282828;
 	border: none;
@@ -135,4 +135,19 @@ label:focus {
 #idle_inhibitor.activated {
 	background-color: #d1d1d1;
 	color: #1e1e1e;
+}
+
+#custom-theme-toggle.light {
+	background-color: #d1d1d1;
+	color: #1e1e1e;
+}
+
+#hardware #disk,
+#hardware #cpu,
+#hardware #memory {
+	margin-right: 5px;
+}
+
+#extray #custom-theme-toggle {
+	margin-right: 5px;
 }
