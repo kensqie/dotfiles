@@ -44,9 +44,27 @@
 		"format": " {short}"
 	},
 	"clock": {
-		"format": " {:%H:%M}",
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format-alt": " {:%Y-%m-%d}"
+		"format": " {:%R}",
+		"format-alt": " {:%d %B %Y}",
+		"tooltip-format": "{calendar}",
+		"calendar": {
+			"mode" : "month",
+			"mode-mon-col" : 3,
+			"weeks-pos" : "",
+			"on-scroll" : 1,
+			"format": {
+				"months": "<b>{}</b>",
+				"days": "{}",
+				"weeks": "<b>W{}</b>",
+				"weekdays": "{}",
+				"today": "<b><u>{}</u></b>"
+			}
+		},
+		"actions": {
+			"on-click-right": "mode",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
 	},
 	"disk": {
 		"interval": 30,
