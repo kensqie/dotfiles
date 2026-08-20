@@ -24,10 +24,8 @@ gitsigns.setup({
 			return "<Ignore>"
 		end, { expr = true, desc = "Gitsigns prev hunk" })
 
-		vim.keymap.set({ "n", "v" }, "<leader>gs", "<CMD>Gitsigns stage_hunk<CR>",
-		{ desc = "Gitsigns stage hunk" })
-		vim.keymap.set({ "n", "v" }, "<leader>gr", "<CMD>Gitsigns reset_hunk<CR>",
-		{ desc = "Gitsigns reset hunk" })
+		vim.keymap.set({ "n", "v" }, "<leader>gs", "<CMD>Gitsigns stage_hunk<CR>", { desc = "Gitsigns stage hunk" })
+		vim.keymap.set({ "n", "v" }, "<leader>gr", "<CMD>Gitsigns reset_hunk<CR>", { desc = "Gitsigns reset hunk" })
 		vim.keymap.set("n", "<leader>gu", gs.undo_stage_hunk, { desc = "Gitsigns undo stage hunk" })
 		vim.keymap.set("n", "<leader>gh", gs.preview_hunk, { desc = "Gitsigns preview hunk" })
 		vim.keymap.set("n", "<leader>gS", gs.stage_buffer, { desc = "Gitsigns stage buffer" })

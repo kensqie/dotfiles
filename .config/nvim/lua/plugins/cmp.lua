@@ -1,10 +1,8 @@
 local cmp = require("cmp")
-local luasnip = require("luasnip")
 
 cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
 	}),
@@ -25,7 +23,7 @@ cmp.setup({
 	end,
 	snippet = {
 		expand = function(args)
-			luasnip.lsp_expand(args.body)
+			vim.snippet.expand(args.body)
 		end,
 	},
 	formatting = {
@@ -59,31 +57,18 @@ cmp.setup({
 			behavior = cmp.ConfirmBehavior.Replace,
 		}),
 		["<Tab>"] = cmp.mapping(function(fallback)
-			if luasnip.expand_or_locally_jumpable() then
-				luasnip.expand_or_jump()
+			if vim.snippet.active({ direction = 1 }) then
+				vim.snippet.jump(1)
 			else
 				fallback()
 			end
 		end, { "i", "s" }),
 		["<S-Tab>"] = cmp.mapping(function(fallback)
-			if luasnip.jumpable(-1) then
-				luasnip.jump(-1)
+			if vim.snippet.active({ direction = -1 }) then
+				vim.snippet.jump(-1)
 			else
 				fallback()
 			end
 		end, { "i", "s" }),
 	},
 })
-
-local leave_snippet = function()
-	if
-		((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
-		and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
-		and not luasnip.session.jump_active
-		then
-			luasnip.unlink_current()
-		end
-	end
-
-	vim.api.nvim_create_user_command("LeaveSnippet", leave_snippet, { nargs = "?" })
-	vim.cmd("autocmd ModeChanged * LeaveSnippet")
