@@ -4,6 +4,7 @@ spawn-at-startup "swayidle" "-w" \
 "timeout" "901" "niri msg action power-off-monitors" \
 "timeout" "1200" "systemctl suspend" \
 "before-sleep" "swaylock -f"
+// spawn-at-startup "sh" "-c" "sleep 1 && swaybg -m fill -i ~/Pictures/wallpaper.jpg"
 
 // screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 screenshot-path null
