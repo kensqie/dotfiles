@@ -134,16 +134,6 @@ binds {
 	XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
 	XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-	Mod+Shift+Slash { show-hotkey-overlay; }
-
-	Mod+Return repeat=false hotkey-overlay-title="Open a Terminal" { spawn "ghostty"; }
-	Mod+D hotkey-overlay-title="Run an Application" { spawn "fuzzel"; }
-	Mod+Ctrl+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
-
-	Mod+O repeat=false { toggle-overview; }
-
-	Mod+Q repeat=false { close-window; }
-
 	Mod+H { focus-column-left; }
 	Mod+J { focus-window-or-workspace-down; }
 	Mod+K { focus-window-or-workspace-up; }
@@ -163,6 +153,7 @@ binds {
 	Mod+7 { focus-workspace 7; }
 	Mod+8 { focus-workspace 8; }
 	Mod+9 { focus-workspace 9; }
+
 	Mod+Shift+1 { move-column-to-workspace 1; }
 	Mod+Shift+2 { move-column-to-workspace 2; }
 	Mod+Shift+3 { move-column-to-workspace 3; }
@@ -173,49 +164,119 @@ binds {
 	Mod+Shift+8 { move-column-to-workspace 8; }
 	Mod+Shift+9 { move-column-to-workspace 9; }
 
-	Mod+BracketLeft { consume-or-expel-window-left; }
-	Mod+BracketRight { consume-or-expel-window-right; }
+	Mod+Shift+Slash hotkey-overlay-title="Show Hotkey Overlay" {
+		show-hotkey-overlay;
+	}
 
-	Mod+Comma { consume-window-into-column; }
-	Mod+Period { expel-window-from-column; }
+	Mod+Escape allow-inhibiting=false hotkey-overlay-title="Toggle Keyboard Shortcuts Inhibit" {
+		toggle-keyboard-shortcuts-inhibit;
+	}
 
-	Mod+R { switch-preset-column-width; }
-	Mod+Shift+R { switch-preset-column-width-back; }
+	Mod+Shift+E hotkey-overlay-title="Exit" {
+		quit;
+	}
 
-	Mod+Ctrl+Shift+R { switch-preset-window-height; }
-	Mod+Ctrl+R { reset-window-height; }
+	Mod+Return repeat=false hotkey-overlay-title="Open a Terminal" {
+		spawn "ghostty";
+	}
 
-	Mod+F { maximize-column; }
-	Mod+Shift+F { fullscreen-window; }
+	Mod+D hotkey-overlay-title="Run an Application" {
+		spawn "fuzzel";
+	}
 
-	Mod+M { maximize-window-to-edges; }
+	Mod+Ctrl+L hotkey-overlay-title="Lock the Screen" {
+		spawn "swaylock";
+	}
 
-	Mod+Ctrl+F { expand-column-to-available-width; }
+	Mod+O repeat=false hotkey-overlay-title="Toggle Overview" {
+		toggle-overview;
+	}
 
-	Mod+C { center-column; }
+	Mod+Q repeat=false hotkey-overlay-title="Close Window" {
+		close-window;
+	}
 
-	Mod+Ctrl+C { center-visible-columns; }
+	Mod+Comma hotkey-overlay-title="Consume Window into Column" {
+		consume-window-into-column;
+	}
 
-	Mod+Minus { set-column-width "-10%"; }
-	Mod+Equal { set-column-width "+10%"; }
+	Mod+Period hotkey-overlay-title="Expel Window from Column" {
+		expel-window-from-column;
+	}
 
-	Mod+Shift+Minus { set-window-height "-10%"; }
-	Mod+Shift+Equal { set-window-height "+10%"; }
+	Mod+T hotkey-overlay-title="Toggle Tabbed Column Display" {
+		toggle-column-tabbed-display;
+	}
 
-	Mod+V { toggle-window-floating; }
-	Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+	Mod+R hotkey-overlay-title="Next Column Width Preset" {
+		switch-preset-column-width;
+	}
 
-	Mod+W { toggle-column-tabbed-display; }
+	Mod+Shift+R hotkey-overlay-title="Previous Column Width Preset" {
+		switch-preset-column-width-back;
+	}
 
-	Mod+S { screenshot; }
-	Print { screenshot; }
-	Ctrl+Print { screenshot-screen; }
-	Alt+Print { screenshot-window; }
+	Mod+Minus hotkey-overlay-title="Decrease Column Width" {
+		set-column-width "-10%";
+	}
 
-	Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+	Mod+Equal hotkey-overlay-title="Increase Column Width" {
+		set-column-width "+10%";
+	}
 
-	Mod+Shift+E { quit; }
-	Ctrl+Alt+Delete { quit; }
+	Mod+Shift+Minus hotkey-overlay-title="Decrease Window Height" {
+		set-window-height "-10%";
+	}
 
-	Mod+Shift+P { power-off-monitors; }
+	Mod+Shift+Equal hotkey-overlay-title="Increase Window Height" {
+		set-window-height "+10%";
+	}
+
+	Mod+F hotkey-overlay-title="Maximize Column" {
+		maximize-column;
+	}
+
+	Mod+Shift+F hotkey-overlay-title="Toggle Fullscreen" {
+		fullscreen-window;
+	}
+
+	Mod+Ctrl+F hotkey-overlay-title="Maximize Window to Edges" {
+		maximize-window-to-edges;
+	}
+
+	Mod+C hotkey-overlay-title="Center Column" {
+		center-column;
+	}
+
+	Mod+V hotkey-overlay-title="Toggle Floating Window" {
+		toggle-window-floating;
+	}
+
+	Mod+Shift+V hotkey-overlay-title="Switch Floating / Tiling Focus" {
+		switch-focus-between-floating-and-tiling;
+	}
+
+	Mod+S hotkey-overlay-title="Screenshot" {
+		screenshot show-pointer=false;
+	}
+
+	Print hotkey-overlay-title="Screenshot" {
+		screenshot show-pointer=false;
+	}
+
+	Ctrl+Print hotkey-overlay-title="Screenshot Screen" {
+		screenshot-screen;
+	}
+
+	Alt+Print hotkey-overlay-title="Screenshot Window" {
+		screenshot-window;
+	}
+
+	Mod+M hotkey-overlay-title="Switch to Next Monitor" {
+		focus-monitor-next;
+	}
+
+	Mod+Shift+P hotkey-overlay-title="Power Off Monitors" {
+		power-off-monitors;
+	}
 }
