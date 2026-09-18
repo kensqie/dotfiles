@@ -15,10 +15,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>c", "gcc", { remap = true, desc = "Toggle comment line" })
 vim.keymap.set("x", "<leader>c", "gc", { remap = true, desc = "Toggle comment" })
 
-vim.keymap.set("n", "<leader>kw", "<CMD>bdelete<CR>", { desc = "Delete buffer" })
+vim.keymap.set("n", "<leader>w", "<CMD>bdelete<CR>", { desc = "Delete buffer" })
 
-vim.keymap.set({ "n", "v" }, "<leader>ky", [["+y]], { desc = "Copy in global buffer" })
-vim.keymap.set("x", "<leader>kp", [["_dP]], { desc = "Paste without change buffer" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy in global buffer" })
 
 vim.keymap.set("n", "<leader>tb", "<CMD>let &bg=(&bg=='light'?'dark':'light')<CR>", { desc = "Toggle background" })
 vim.keymap.set("n", "<leader>tz", "<CMD>set wrap!<CR>", { desc = "Toggle text wrap" })

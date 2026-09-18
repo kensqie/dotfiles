@@ -4,7 +4,7 @@ require("yazi").setup({
 	open_for_directories = true,
 })
 
-vim.keymap.set("n", "<leader>ke", "<CMD>Yazi<CR>", {
+vim.keymap.set("n", "<leader>e", "<CMD>Yazi<CR>", {
 	desc = "Open Yazi",
 	silent = true,
 })
