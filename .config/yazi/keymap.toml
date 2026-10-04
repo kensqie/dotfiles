@@ -1,5 +1,8 @@
 [mgr]
 prepend_keymap = [
-	{ on = [ "g", "i" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "<Space>" ], run = "noop" },
+	{ on = [ "r" ], run = "rename --cursor=before_ext", desc = "Rename before extension" },
+	{ on = [ "R" ], run = "rename --cursor=end", desc = "Rename at end" },
+	{ on = [ "g", "i" ], run = "cd --interactive", desc = "Jump interactively" },
+	{ on = [ "<C-j>" ], run = "shell $SHELL --block", desc = "Open shell here" },
 ]
