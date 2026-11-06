@@ -3,7 +3,7 @@ show-failed-attempts
 ignore-empty-password
 indicator-idle-visible
 
-font=Monospace
+font=Jet Brains Mono NL
 font-size=24
 
 color=1f1f1f
