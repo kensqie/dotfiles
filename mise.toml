@@ -1,0 +1,15 @@
+[dotfiles]
+"~/.bashrc" = { source = ".bashrc", mode = "copy" }
+"~/.zshrc" = { source = ".zshrc", mode = "copy" }
+"~/.gitconfig" = { source = ".gitconfig", mode = "copy" }
+"~/.tmux.conf" = { source = ".tmux.conf", mode = "copy" }
+"~/.vimrc" = { source = ".vimrc", mode = "copy" }
+
+"~/.config/fuzzel" = { source = ".config/fuzzel", mode = "copy" }
+"~/.config/ghostty" = { source = ".config/ghostty", mode = "copy" }
+"~/.config/mako" = { source = ".config/mako", mode = "copy" }
+"~/.config/niri" = { source = ".config/niri", mode = "copy" }
+"~/.config/nvim" = { source = ".config/nvim", mode = "copy" }
+"~/.config/swaylock" = { source = ".config/swaylock", mode = "copy" }
+"~/.config/waybar" = { source = ".config/waybar", mode = "copy" }
+"~/.config/yazi" = { source = ".config/yazi", mode = "copy" }
