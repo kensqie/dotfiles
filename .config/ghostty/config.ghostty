@@ -5,6 +5,3 @@ font-family = "Jet Brains Mono NL"
 font-size = "16"
 
 mouse-hide-while-typing = "true"
-
-custom-shader = shaders/cursor_tail.glsl
-custom-shader-animation = true
