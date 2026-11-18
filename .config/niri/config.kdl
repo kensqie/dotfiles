@@ -81,7 +81,7 @@ layout {
 
 		active-color "#606060"
 		inactive-color "#404040"
-		urgent-color "#d13b3b"
+		urgent-color "#f08a65"
 	}
 
 	shadow {

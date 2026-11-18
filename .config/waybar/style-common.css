@@ -7,7 +7,7 @@ window#waybar {
 	background-color: @bg;
 	border-bottom: none;
 	color: @fg;
-	transition-duration: 0.3s;
+	transition-duration: 0.2s;
 	transition-property: background-color;
 }
 
@@ -67,6 +67,11 @@ window#waybar.hidden {
 
 #workspaces {
 	background-color: @surface;
+}
+
+#workspaces,
+#workspaces button {
+	transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 #workspaces button:hover {

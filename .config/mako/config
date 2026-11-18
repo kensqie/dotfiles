@@ -18,8 +18,8 @@ padding=10
 border-radius=5
 border-size=1
 
-background-color=#282828
-border-color=#f28c28
+background-color=#1f1f1f
+border-color=#f08a65
 text-color=#d1d1d1
 
 default-timeout=10000
