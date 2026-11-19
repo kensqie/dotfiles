@@ -79,9 +79,9 @@ layout {
 	border {
 		width 1
 
-		active-color "#606060"
-		inactive-color "#404040"
-		urgent-color "#f08a65"
+		active-color "#{{ index .appearance.colors.dark.ansi 8 }}"
+		inactive-color "#{{ index .appearance.colors.dark.ansi 0 }}"
+		urgent-color "#{{ .appearance.colors.dark.accent }}"
 	}
 
 	shadow {

@@ -1,0 +1,27 @@
+font={{ .appearance.font.monospace }}:size={{ .appearance.font.launcherSize }}
+terminal=ghostty -e
+exit-on-keyboard-focus-loss=yes
+prompt=""
+icon-theme=""
+icons-enabled=no
+lines=10
+width=40
+horizontal-pad=40
+vertical-pad=20
+inner-pad=20
+
+[colors]
+background={{ .appearance.colors.dark.background }}ff
+border={{ .appearance.colors.dark.accent }}ff
+input={{ .appearance.colors.dark.foreground }}ff
+text={{ .appearance.colors.dark.foreground }}ff
+match={{ .appearance.colors.dark.accent }}ff
+selection={{ .appearance.colors.dark.selectionBackground }}ff
+selection-text={{ .appearance.colors.dark.selectionForeground }}ff
+selection-match={{ .appearance.colors.dark.accent }}ff
+
+[border]
+radius=5
+
+[key-bindings]
+cancel=Escape Control+c

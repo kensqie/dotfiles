@@ -1,26 +1,19 @@
 # Dotfiles
 
-## Trust
-
-```sh
-mise trust
-```
-
 ## Preview deployment
 
 ```sh
-mise bootstrap --dry-run
+chezmoi -S . diff
 ```
 
-## Deploy
+## Deploy all
 
 ```sh
-mise bootstrap
+chezmoi -S . apply
 ```
 
-## Deploy a file or directory
+## Deploy selectively
 
 ```sh
-mise dot apply --dry-run <target>
-mise dot apply <target>
+chezmoi -S . apply --recursive <target>
 ```

@@ -1,0 +1,32 @@
+[appearance.font]
+monospace = "JetBrains Mono NL"
+icons = "Font Awesome 5 Free Solid"
+terminalSize = 16
+launcherSize = 16
+notificationSize = 10
+lockScreenSize = 24
+panelSize = 14
+
+[appearance.colors.dark]
+background = "1f1f1f"
+foreground = "d1d1d1"
+accent = "f08a65"
+cursorText = "1f1f1f"
+selectionBackground = "323232"
+selectionForeground = "d1d1d1"
+ansi = [
+	"262626", "d4938c", "a3b39a", "c8ad76", "9bafc6", "b7a2be", "8fb4b1", "808080",
+	"464646", "e7aca5", "bbc9b2", "ddc393", "b5c6d9", "cebad3", "a9ccc8", "d7d7d7",
+]
+
+[appearance.colors.light]
+background = "faf9f6"
+foreground = "34312d"
+accent = "b34e31"
+cursorText = "ffffff"
+selectionBackground = "d4d4d4"
+selectionForeground = "1f1f1f"
+ansi = [
+	"272727", "864645", "526b51", "785d2d", "496380", "755477", "3d696a", "6b6b6b",
+	"6f6f6f", "743c3b", "455d44", "694f24", "3e5470", "644666", "325b5c", "5e5e5e",
+]

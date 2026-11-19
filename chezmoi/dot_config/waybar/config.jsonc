@@ -48,10 +48,10 @@
 		"format-alt": " {:%d %B %Y}",
 		"tooltip-format": "{calendar}",
 		"calendar": {
-			"mode" : "month",
-			"mode-mon-col" : 3,
-			"weeks-pos" : "",
-			"on-scroll" : 1,
+			"mode": "month",
+			"mode-mon-col": 3,
+			"weeks-pos": "",
+			"on-scroll": 1,
 			"format": {
 				"months": "<b>{}</b>",
 				"days": "{}",

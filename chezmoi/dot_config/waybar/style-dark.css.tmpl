@@ -1,0 +1,10 @@
+@define-color bg #{{ .appearance.colors.dark.background }};
+@define-color surface #{{ .appearance.colors.dark.background }};
+@define-color fg #{{ .appearance.colors.dark.foreground }};
+@define-color module-bg #{{ index .appearance.colors.dark.ansi 0 }};
+@define-color module-fg #{{ index .appearance.colors.dark.ansi 15 }};
+@define-color muted-fg #{{ index .appearance.colors.dark.ansi 7 }};
+@define-color critical #{{ .appearance.colors.dark.accent }};
+@define-color critical-fg #{{ .appearance.colors.dark.cursorText }};
+
+@import url("style-common.css");

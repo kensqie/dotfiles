@@ -1,0 +1,43 @@
+daemonize
+show-failed-attempts
+show-keyboard-layout
+ignore-empty-password
+indicator-idle-visible
+indicator-caps-lock
+indicator-radius=80
+indicator-thickness=16
+line-uses-inside
+
+font={{ .appearance.font.monospace }}
+font-size={{ .appearance.font.lockScreenSize }}
+
+color={{ .appearance.colors.dark.background }}
+separator-color=00000000
+
+layout-bg-color={{ .appearance.colors.dark.background }}
+layout-border-color={{ index .appearance.colors.dark.ansi 8 }}
+layout-text-color={{ index .appearance.colors.dark.ansi 15 }}
+
+inside-color={{ .appearance.colors.dark.background }}
+text-color={{ index .appearance.colors.dark.ansi 15 }}
+ring-color={{ index .appearance.colors.dark.ansi 8 }}
+key-hl-color={{ index .appearance.colors.dark.ansi 10 }}
+bs-hl-color={{ index .appearance.colors.dark.ansi 9 }}
+
+inside-clear-color={{ .appearance.colors.dark.background }}
+text-clear-color={{ index .appearance.colors.dark.ansi 15 }}
+ring-clear-color={{ index .appearance.colors.dark.ansi 3 }}
+
+inside-ver-color={{ .appearance.colors.dark.background }}
+text-ver-color={{ index .appearance.colors.dark.ansi 15 }}
+ring-ver-color={{ index .appearance.colors.dark.ansi 12 }}
+
+inside-wrong-color={{ .appearance.colors.dark.background }}
+text-wrong-color={{ index .appearance.colors.dark.ansi 15 }}
+ring-wrong-color={{ index .appearance.colors.dark.ansi 1 }}
+
+inside-caps-lock-color={{ .appearance.colors.dark.background }}
+text-caps-lock-color={{ index .appearance.colors.dark.ansi 15 }}
+ring-caps-lock-color={{ index .appearance.colors.dark.ansi 8 }}
+caps-lock-key-hl-color={{ index .appearance.colors.dark.ansi 10 }}
+caps-lock-bs-hl-color={{ index .appearance.colors.dark.ansi 9 }}

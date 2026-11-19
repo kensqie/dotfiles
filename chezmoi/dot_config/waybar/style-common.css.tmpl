@@ -1,6 +1,6 @@
 * {
-	font-family: 'Jet Brains Mono NL', 'Font Awesome 5 Free Solid';
-	font-size: 14px;
+	font-family: '{{ .appearance.font.monospace }}', '{{ .appearance.font.icons }}';
+	font-size: {{ .appearance.font.panelSize }}px;
 }
 
 window#waybar {
@@ -30,16 +30,14 @@ window#waybar.hidden {
 #mode,
 #idle_inhibitor,
 #mpd,
-#battery,
 #language,
-#idle_inhibitor,
 #taskbar,
 #custom-theme-toggle,
 #workspaces {
 	background-color: @module-bg;
 	border: none;
 	border-radius: 5px;
-	color: @fg;
+	color: @module-fg;
 	padding: 2px 10px;
 	margin: 5px 0;
 }
@@ -55,6 +53,8 @@ window#waybar.hidden {
 #workspaces button {
 	background-color: @module-bg;
 	color: @muted-fg;
+	font-weight: normal;
+	text-shadow: none;
 	border: none;
 	box-shadow: none;
 	padding: 2px 5px;
@@ -62,11 +62,8 @@ window#waybar.hidden {
 }
 
 #taskbar button:hover {
-	background: @fg;
-}
-
-#workspaces {
-	background-color: @surface;
+	background: @module-fg;
+	color: @module-bg;
 }
 
 #workspaces,
@@ -76,12 +73,12 @@ window#waybar.hidden {
 
 #workspaces button:hover {
 	background: @module-bg;
-	color: @fg;
+	color: @module-fg;
 }
 
 #workspaces button.focused {
 	background-color: @module-bg;
-	color: @fg;
+	color: @module-fg;
 }
 
 #workspaces button.urgent,
@@ -101,7 +98,7 @@ window#waybar.hidden {
 #battery,
 #battery.charging,
 #battery.plugged {
-	color: @fg;
+	color: @module-fg;
 }
 
 @keyframes blink {
